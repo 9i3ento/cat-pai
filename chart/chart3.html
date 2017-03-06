@@ -1,0 +1,42 @@
+<!-- Chart JS -->
+	
+<html>
+<head>
+    <title>Chart.js TEST</title>
+	<script src="Chart.min.js"></script>
+</head>
+<body>
+    <div class="container">
+  <h2>Chart.js — Line Chart Demo</h2>
+  <div>
+    <canvas id="myChart"></canvas>
+  </div>
+</div>
+<script type="text/javascript">
+        var ctx = document.getElementById("myChart").getContext('2d');
+		var myChart = new Chart(ctx, {
+			type: 'doughnut',
+			data: {
+				labels: [
+					"Red",
+					"Blue",
+					"Yellow"
+				],
+				datasets: [{
+					data: [300, 50, 100],
+					backgroundColor: [
+						"#FF6384",
+						"#36A2EB",
+						"#FFCE56"
+					],
+					hoverBackgroundColor: [
+						"#FF6384",
+						"#36A2EB",
+						"#FFCE56"
+					]
+				}]
+			}
+		});
+</script>
+</body>
+</html>

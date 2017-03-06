@@ -1,0 +1,28 @@
+<html>
+<head runat="server">
+    <title>Chart.js</title>
+    <script src=" https://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            var dataDemo = { labels: ["Apple", "Sumsung", "ASUS", "OPPO"],
+                datasets: [{
+                    label: "2557",
+                    fillColor: "#5B90BF",
+                    data: [20, 10, 9, 8]
+                }]
+            };
+            var ctx = $("#report").get(0).getContext("2d");
+            var chart = new Chart(ctx).Bar(dataDemo, { bezierCurve: false });
+        });
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <canvas id="report" width="600" height="300">
+        </canvas>
+    </div>
+    </form>
+</body>
+</html>
